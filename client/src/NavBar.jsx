@@ -52,6 +52,7 @@ const NavBar = (props) => {
 
 				</div>
 			</div>
+			<img src="/assest/images/shape.png" className="shape1" alt=""/>
 		</nav>
 	)
 }

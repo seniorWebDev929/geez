@@ -76,7 +76,7 @@ class Newreleases extends React.Component {
           <div className="col-md-4">
             <div className="single-item">
               <div className="item-img text-center ">
-                <img className="img-fluid" src="./assest/images/G2.png" alt="" />
+                <img className="img-fluid" src="/assest/images/G2.png" alt="" />
               </div>
               <div className="items-details text-center singlePage-item">
                 <span>Yeezy 700</span>
@@ -202,6 +202,8 @@ class Newreleases extends React.Component {
         </div>
 
       </div>
+      <img src="/assest/images/shape.png" class="shape2" alt=""/>
+      <img src="/assest/images/shape.png" class="shape6" alt=""/>
     </div>
     )
   }

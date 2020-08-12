@@ -38,7 +38,7 @@ const Home = (props) => {
 									<span className="Releasing">Releasing 7.20</span>
 								</div>
 								<div className="hover-section">
-									<a href="./New-Releases.html"> <i className="fas fa-plus mr-2"></i> show more</a>
+									<a href="/newreleases"> <i className="fas fa-plus mr-2"></i> show more</a>
 								</div>
 							</div>
 						</div>
@@ -140,7 +140,7 @@ const Home = (props) => {
 						</div>
 						<div className="show-more text-center">
 
-							<a href="#"> <i className="fas fa-plus mr-2"></i> show more</a>
+							<a href="/newreleases"> <i className="fas fa-plus mr-2"></i> show more</a>
 
 						</div>
 					</div>
@@ -191,6 +191,10 @@ const Home = (props) => {
             </div>
         </footer>
         
+        <img src="/assest/images/shape.png" className="shape2" alt=""/>
+        <img src="/assest/images/shape.png" className="shape3" alt=""/>
+        <img src="/assest/images/shape.png" className="shape4" alt=""/>
+        <img src="/assest/images/shape.png" className="shape5" alt=""/>
 				</div>
 		</React.Fragment>
 	)

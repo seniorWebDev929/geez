@@ -239,6 +239,7 @@ nav ul li a.order-price:hover {
 /***********Releases***********/
 .Releases {
   margin-top: 120px;
+  margin-bottom: 120px;
 }
 .single-item {
   padding: 20px;
@@ -304,7 +305,7 @@ nav ul li a.order-price:hover {
   font-size: 18px;
 }
 .item-price button {
-  padding: 4px 25px;
+  /* padding: 4px 25px; */
   background-color: #232326;
   border-radius: 50px;
   -webkit-border-radius: 50px;
@@ -581,6 +582,7 @@ footer {
 .calender-stage {
   padding: 30px 20px;
   background-color: #2a2a2d;
+  margin-bottom: 55px;
 }
 .calender-stage h5 {
   font-family: "Black";
@@ -691,8 +693,13 @@ footer {
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
   box-shadow: 0px 25px 30px 0px #00000059;
-  margin-bottom: 50px;
+  margin-bottom: 249px;
 }
+
+.signUp-form {
+  margin-bottom: 169px;
+}
+
 .user-form img {
   max-width: 85px;
 }
@@ -846,7 +853,7 @@ top: -1200px;
   .shape3 {
     z-index: -1;
     position: absolute;
-    top: 650px;
+    top: 816px;
     left: -1000px;
   }
   .shape4 {
@@ -857,14 +864,23 @@ top: -1200px;
   }
   .shape5 {
     z-index: -1;
-      position: absolute;
-    /* bottom: -781px; */
-    top: 2700px;
+    position: absolute;
+    bottom: -864px;
     left: -779px;
     width: 1760px;
-}
- 
-    
+  }
+  .shape6 {
+    z-index: -1;
+    position: absolute;
+    top: 1030px;
+    left: -663px;
+  }
+  .shape7 {
+    z-index: -1;
+    position: absolute;
+    top: 317px;
+    right: -1040px;
+  }
   }
  
 
@@ -884,8 +900,8 @@ top: -1200px;
   .shape3 {
     z-index: -1;
     position: absolute;
-    top: 650px;
-    left: -800px;
+    top: 816px;
+    left: -1000px;
   }
   .shape4 {
     z-index: -1;
@@ -898,6 +914,18 @@ top: -1200px;
     position: absolute;
     bottom: -650px;
     left: -830px;
+  }
+  .shape6 {
+    z-index: -1;
+    position: absolute;
+    top: 943px;
+    left: -663px;
+  }
+  .shape7 {
+    z-index: -1;
+    position: absolute;
+    top: 317px;
+    right: -1040px;
   }
 }
 @media (max-width: 991px) {
@@ -916,7 +944,7 @@ top: -1200px;
   .shape3 {
     z-index: -1;
     position: absolute;
-    top: 650px;
+    top: 675px;
     left: -1000px;
   }
   .shape4 {
@@ -928,8 +956,14 @@ top: -1200px;
   .shape5 {
     z-index: -1;
     position: absolute;
-    bottom: -650px;
+    bottom: -700px;
     left: -830px;
+  }
+  .shape6 {
+    z-index: -1;
+    position: absolute;
+    top: 700px;
+    left: -930px;
   }
   nav ul li {
     margin-right: 0;
@@ -951,7 +985,7 @@ top: -1200px;
   .shape3 {
     z-index: -1;
     position: absolute;
-    top: 650px;
+    top: 1047px;
     left: -1000px;
   }
   .shape4 {
@@ -963,8 +997,14 @@ top: -1200px;
   .shape5 {
     z-index: -1;
     position: absolute;
-    bottom: -650px;
-    left: -830px;
+    bottom: -660px;
+    left: -972px;
+  }
+  .shape6 {
+    z-index: -1;
+    position: absolute;
+    top: 700px;
+    left: -960px;
   }
   .HomeImg {
     max-width: 100%;

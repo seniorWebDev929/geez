@@ -1,7 +1,7 @@
 import React from 'react'
 import httpClient from '../httpClient'
 
-class Leaks extends React.Component {
+class GuideFormat extends React.Component {
 
   render() {
 
@@ -72,8 +72,8 @@ class Leaks extends React.Component {
         <img src="/assest/images/shape.png" className="shape2" alt=""/>
         <img src="/assest/images/shape.png" className="shape3" alt=""/>
       </div>
-		)
-	}
+    )
+  }
 }
 
-export default Leaks
+export default GuideFormat

@@ -45,7 +45,7 @@ class SignUp extends React.Component {
 			// 	</div>
 			// </div>
 			<div class="container">
-				<div class="user-form text-center">
+				<div class="user-form text-center signUp-form">
 					<img src="/assest/images/logo.png" class="img-fluid" alt="" />
 					<p>Hey! Register Here.</p>
 					<div class="form-inputs">
@@ -67,6 +67,7 @@ class SignUp extends React.Component {
 						Already Have An Account? <a href="/login">Login</a>
 					</div>
 				</div>
+				<img src="/assest/images/shape.png" className="shape7" alt=""/>
 			</div>
 		)
 	}

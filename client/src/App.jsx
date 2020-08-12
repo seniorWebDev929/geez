@@ -11,6 +11,7 @@ import Home from './views/Home'
 import NewReleases from './views/NewReleases'
 import Calendar from './views/Calendar'
 import Leaks from './views/Leaks'
+import GuideFormat from './views/GuideFormat'
 
 class App extends React.Component {
 	state = { currentUser: httpClient.getCurrentUser() }
@@ -27,7 +28,7 @@ class App extends React.Component {
 	render() {
 		const { currentUser } = this.state
 		return (
-			<div>
+			<section className="mainPage">
 			<Router>
 				<NavBar currentUser={currentUser} />
 
@@ -60,14 +61,12 @@ class App extends React.Component {
 
 					<Route path="/leaks" component={Leaks} />
 
+					<Route path="/guideformat" component={GuideFormat} />
+
 				</Switch>
-				{/* <img src="/assest/images/shape.png" className="shape1" alt=""/>
-        <img src="/assest/images/shape.png" className="shape2" alt=""/>
-        <img src="/assest/images/shape.png" className="shape3" alt=""/>
-        <img src="/assest/images/shape.png" className="shape4" alt=""/>
-        <img src="/assest/images/shape.png" className="shape5" alt=""/> */}
+				
 				</Router>
-			</div>
+			</section>
 		)
 	}
 }

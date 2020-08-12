@@ -66,7 +66,7 @@ class LogIn extends React.Component {
 					</div>
 				</div>
 
-
+				<img src="/assest/images/shape.png" class="shape7" alt=""/>
 			</div>
 		)
 	}
