@@ -1,18 +1,9 @@
 import React from 'react'
 
-
-// class Newreleases extends React.Component {
+class Newreleases extends React.Component {
   
-//   render() {
-
-    
-//   }
-// }
-
-
-const NewReleases = (props) => {
-  console.log("newreleasesnewreleasesnewreleasesnewreleasesnewreleases")
-  return (
+  render() {
+    return(
     <div className="Releases">
       <div className="container">
         <div className="Featured-head text-center single-page">
@@ -212,6 +203,8 @@ const NewReleases = (props) => {
 
       </div>
     </div>
-  )
+    )
+  }
 }
-export default NewReleases
+
+export default Newreleases

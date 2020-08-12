@@ -28,13 +28,13 @@ class App extends React.Component {
 		const { currentUser } = this.state
 		return (
 			<div>
-<Router>
+			<Router>
 				<NavBar currentUser={currentUser} />
 
 				<Switch>
 					
 				<Route exact path="/" component={Home} />
-				<Route path="/newreleases" component={NewReleases} />
+				
 					<Route path="/login" render={(props) => {
 						return <LogIn {...props} onLoginSuccess={this.onLoginSuccess.bind(this)} />
 					}} />
@@ -54,10 +54,8 @@ class App extends React.Component {
 							: <Redirect to="/login" />
 					}} />
 
-
+					<Route path="/newreleases" component={NewReleases} />
 					
-					
-
 					<Route path="/calendar" component={Calendar} />
 
 					<Route path="/leaks" component={Leaks} />
