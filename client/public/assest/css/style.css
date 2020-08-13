@@ -747,6 +747,14 @@ footer {
 .login {
   margin-top: 15px !important;
 }
+
+button.login, .register:hover{
+  cursor: pointer;
+}
+
+button.login, .register:focus {
+  outline: none;
+}
 .account-sub a {
   color: #36dd95;
 }
@@ -835,6 +843,10 @@ footer {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.warning-message {
+  display: none;
+}
 /****************Medida**********/
 
 @media (min-width: 1380px) {
@@ -878,7 +890,7 @@ top: -1200px;
   .shape7 {
     z-index: -1;
     position: absolute;
-    top: 317px;
+    top: 361px;
     right: -1040px;
   }
   }
@@ -924,7 +936,7 @@ top: -1200px;
   .shape7 {
     z-index: -1;
     position: absolute;
-    top: 317px;
+    top: 361px;
     right: -1040px;
   }
 }

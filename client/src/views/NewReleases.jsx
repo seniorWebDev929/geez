@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Newreleases extends React.Component {
+class NewReleases extends React.Component {
   
   render() {
     return(
@@ -202,11 +202,11 @@ class Newreleases extends React.Component {
         </div>
 
       </div>
-      <img src="/assest/images/shape.png" class="shape2" alt=""/>
-      <img src="/assest/images/shape.png" class="shape6" alt=""/>
+      <img src="/assest/images/shape.png" className="shape2" alt=""/>
+      <img src="/assest/images/shape.png" className="shape6" alt=""/>
     </div>
     )
   }
 }
 
-export default Newreleases
+export default NewReleases

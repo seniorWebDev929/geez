@@ -21,7 +21,7 @@ module.exports = {
 	// create a new user
 	create: (req, res) => {
 		User.create(req.body, (err, user) => {
-			if(err) return res.json({success: false, code: err.code})
+			if(err) return res.json({success: false, code: err})
 			// once user is created, generate a token to "log in":
 			const token = signToken(user)
 			res.json({success: true, message: "User created. Token attached.", token})

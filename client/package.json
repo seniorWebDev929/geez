@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
+    "check-password-strength": "^1.0.8",
+    "email-validator": "^2.0.4",
     "jwt-decode": "^2.2.0",
     "milligram": "^1.4.1",
     "react": "^16.13.1",

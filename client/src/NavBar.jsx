@@ -5,20 +5,7 @@ const NavBar = (props) => {
 	return (
 		// <div className='NavBar'>
 		// 	<Link to="/">Home</Link>
-		// 	{props.currentUser
-		// 		? (
-		// 			<span>
-		// 				<Link to="/vip">VIP</Link>
-		// 				<Link to="/logout">Log Out</Link>
-		// 			</span>
-		// 		)
-		// 		: (
-		// 			<span>
-		// 				<Link to="/login">Log In</Link>
-		// 				<Link to="/signup">Sign Up</Link>
-		// 			</span>
-		// 		)
-		// 	}
+			
 		// </div>
 		<nav className="navbar navbar-expand-lg main ">
 			<div className="container">
@@ -43,10 +30,24 @@ const NavBar = (props) => {
 								<li className="nav-item">
 										<a className="nav-link" href="/leaks" data-scroll="work">Leaks</a>
 								</li>
-
-								<li className="nav-item">
-										<a className="nav-link order-price" href="/login" data-scroll="contact">login</a>
-								</li>
+								{props.currentUser
+								? (
+									<span>
+										{/* <Link to="/vip">VIP</Link> */}
+										<li className="nav-item">
+											<a className="nav-link order-price" href="/logout" data-scroll="contact">logout</a>
+										</li>
+									</span>
+								)
+								: (
+									<span>
+										<li className="nav-item">
+											<a className="nav-link order-price" href="/login" data-scroll="contact">login</a>
+										</li>
+									</span>
+								)
+							}
+								
 
 						</ul>
 

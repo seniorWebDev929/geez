@@ -27,6 +27,7 @@ class App extends React.Component {
 	
 	render() {
 		const { currentUser } = this.state
+		console.log(currentUser);
 		return (
 			<section className="mainPage">
 			<Router>
@@ -34,7 +35,7 @@ class App extends React.Component {
 
 				<Switch>
 					
-				<Route exact path="/" component={Home} />
+				<Route exact path="/" component={() => <Home currentUser={currentUser}/>} />
 				
 					<Route path="/login" render={(props) => {
 						return <LogIn {...props} onLoginSuccess={this.onLoginSuccess.bind(this)} />
@@ -55,11 +56,23 @@ class App extends React.Component {
 							: <Redirect to="/login" />
 					}} />
 
-					<Route path="/newreleases" component={NewReleases} />
+					<Route path="/newreleases" render={() => {
+						return currentUser
+							? <NewReleases />
+							: <Redirect to="/login" />
+					}} />
 					
-					<Route path="/calendar" component={Calendar} />
+					<Route path="/calendar" render={() => {
+						return currentUser
+							? <Calendar />
+							: <Redirect to="/login" />
+					}} />
 
-					<Route path="/leaks" component={Leaks} />
+					<Route path="/leaks" render={() => {
+						return currentUser
+							? <Leaks />
+							: <Redirect to="/login" />
+					}} />
 
 					<Route path="/guideformat" component={GuideFormat} />
 

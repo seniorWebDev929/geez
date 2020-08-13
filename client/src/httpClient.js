@@ -35,10 +35,10 @@ httpClient.logIn = function(credentials) {
 
 // logIn and signUp functions could be combined into one since the only difference is the url we're sending a request to..
 httpClient.signUp = function(userInfo) {
+	console.log("signup called")
 	return this({ method: 'post', url: 'http://localhost:3001/api/users', data: userInfo})
 		.then((serverResponse) => {
 			const token = serverResponse.data.token;
-			console.log(token)
 			if(token) {
 				// sets token as an included header for all subsequent api requests
 				this.defaults.headers.common.token = this.setToken(token)

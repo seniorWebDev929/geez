@@ -46,8 +46,8 @@ class LogIn extends React.Component {
 					<img src="./assest/images/logo.png" className="img-fluid" alt="" />
 					<p>Welcome back! Please login to continue.</p>
 					<div className="form-inputs">
-						<input type="text" name="" placeholder="user name or email" id="" />
-						<input type="text" name="" placeholder="password" id="" className="mb-2" />
+						<input type="text" name="email" placeholder="email" id="" value={email} onChange={this.onInputChange.bind(this)}/>
+						<input type="password" name="password" placeholder="password" id="" className="mb-2" value={password} onChange={this.onInputChange.bind(this)}/>
 						<div className="pass-power text-left">
 							Password Strength: <span>Strong</span>
 						</div>
@@ -60,13 +60,13 @@ class LogIn extends React.Component {
 						<a href="#">forget passowrd</a>
 
 					</div>
-					<button className="login">Login</button>
+					<button className="login" onClick={this.onFormSubmit.bind(this)}>Login</button>
 					<div className="account-sub">
 						New to Geez? <a href="/signup">Sign Up</a>
 					</div>
 				</div>
 
-				<img src="/assest/images/shape.png" class="shape7" alt=""/>
+				<img src="/assest/images/shape.png" className="shape7" alt=""/>
 			</div>
 		)
 	}
