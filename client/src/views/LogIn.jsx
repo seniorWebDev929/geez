@@ -48,9 +48,9 @@ class LogIn extends React.Component {
 					<div className="form-inputs">
 						<input type="text" name="email" placeholder="email" id="" value={email} onChange={this.onInputChange.bind(this)}/>
 						<input type="password" name="password" placeholder="password" id="" className="mb-2" value={password} onChange={this.onInputChange.bind(this)}/>
-						<div className="pass-power text-left">
+						{/* <div className="pass-power text-left">
 							Password Strength: <span>Strong</span>
-						</div>
+						</div> */}
 					</div>
 					<div className="terms d-flex">
 						<label className="termss">Remember Me
