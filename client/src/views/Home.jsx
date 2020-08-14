@@ -1,18 +1,25 @@
-import React from 'react'
+import React from 'react';
 import Release from './components/Release';
-import Footer from './components/Footer'
+import Footer from './components/Footer';
+import httpClient from '../httpClient';
 
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { isLoggedIn: props.currentUser }
+		this.state = { isLoggedIn: props.currentUser };
 	}
+	componentDidMount() {
+		console.log("component didmont is called")
+		httpClient.get3products().then(productData => {
+				console.log(productData)
+			})
+	}
+
 	render() {
 		const isLoggedIn = this.state.isLoggedIn;
-		console.log(isLoggedIn)
 		let signupBtn;
 		if (!isLoggedIn) {
-			signupBtn = <a href="/signup">Signup</a>
+			signupBtn = <a href="/signup">Signup</a>;
 		}
 		return (
 			<React.Fragment>

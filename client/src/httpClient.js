@@ -55,6 +55,14 @@ httpClient.logOut = function() {
 	return true
 }
 
+httpClient.get3products = function() {
+	console.log("api is called");
+	return this({ method: 'get', url: 'http://localhost:3001/api/products/get3products'})
+		.then((serverResponse) => {
+			console.log(serverResponse.data)
+			return serverResponse.data;
+		})
+}
 // During initial app load attempt to set a localStorage stored token
 // as a default header for all api requests.
 httpClient.defaults.headers.common.token = httpClient.getToken()

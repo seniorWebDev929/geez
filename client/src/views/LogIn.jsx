@@ -3,7 +3,8 @@ import httpClient from '../httpClient'
 
 class LogIn extends React.Component {
 	state = {
-		fields: { email: '', password: ''}
+		fields: { email: '', password: ''},
+		warningMessage: { value: '', display: false }
 	}
 
 	onInputChange(evt) {
@@ -22,6 +23,10 @@ class LogIn extends React.Component {
 			if(user) {
 				this.props.onLoginSuccess(user)
 				this.props.history.push('/')
+			}else{
+				this.setState({
+					warningMessage: {value: 'Email or Password is not correct', display: true}
+				})
 			}
 		})
 	}
@@ -45,12 +50,10 @@ class LogIn extends React.Component {
 				<div className="user-form text-center">
 					<img src="./assest/images/logo.png" className="img-fluid" alt="" />
 					<p>Welcome back! Please login to continue.</p>
+					<p className="text-danger" style={{display:this.state.warningMessage.display}}>{this.state.warningMessage.value}</p>
 					<div className="form-inputs">
 						<input type="text" name="email" placeholder="email" id="" value={email} onChange={this.onInputChange.bind(this)}/>
 						<input type="password" name="password" placeholder="password" id="" className="mb-2" value={password} onChange={this.onInputChange.bind(this)}/>
-						{/* <div className="pass-power text-left">
-							Password Strength: <span>Strong</span>
-						</div> */}
 					</div>
 					<div className="terms d-flex">
 						<label className="termss">Remember Me
