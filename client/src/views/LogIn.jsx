@@ -20,7 +20,11 @@ class LogIn extends React.Component {
 		evt.preventDefault()
 		httpClient.logIn(this.state.fields).then(user => {
 			this.setState({ fields: { email: '', password: '' } })
-			if(user) {
+			if(user.usertype === 0) {
+				this.props.onLoginSuccess(user)
+				this.props.history.push('/admin')
+			}
+			else if(user) {
 				this.props.onLoginSuccess(user)
 				this.props.history.push('/')
 			}else{

@@ -6,7 +6,7 @@ import httpClient from '../httpClient'
 // sign up form behaves almost identically to log in form. We could create a flexible Form component to use for both actions, but for now we'll separate the two:
 class SignUp extends React.Component {
 	state = {
-		fields: { name: '', email: '', password: ''},
+		fields: { name: '', email: '', password: '', usertype: 1 },
 		warningMessage: {value:'', display: false},
 		pswStr: '',
 		privacyAgreed: false
@@ -50,7 +50,7 @@ class SignUp extends React.Component {
 			})
 		}else{
 			httpClient.signUp(this.state.fields).then(user => {
-				this.setState({ fields: { name: '', email: '', password: '' }, warningMessage: { value:'', display: false} })
+				this.setState({ fields: { name: '', email: '', password: '', usertype: 1 }, warningMessage: { value:'', display: false} })
 				if(user) {
 					this.props.onSignUpSuccess(user)
 					this.props.history.push('/')

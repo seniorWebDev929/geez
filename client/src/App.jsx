@@ -12,6 +12,7 @@ import NewReleases from './views/NewReleases'
 import Calendar from './views/Calendar'
 import Leaks from './views/Leaks'
 import GuideFormat from './views/GuideFormat'
+import Admin from './views/Admin'
 
 class App extends React.Component {
 	state = { currentUser: httpClient.getCurrentUser() }
@@ -31,11 +32,12 @@ class App extends React.Component {
 		return (
 			<section className="mainPage">
 			<Router>
+				{/* {currentUser.usertype ? <NavBar currentUser={currentUser} /> : <Admin /> } */}
+				
 				<NavBar currentUser={currentUser} />
-
 				<Switch>
 					
-				<Route exact path="/" component={() => <Home currentUser={currentUser}/>} />
+					<Route exact path="/" component={() => <Home currentUser={currentUser}/>} />
 				
 					<Route path="/login" render={(props) => {
 						return <LogIn {...props} onLoginSuccess={this.onLoginSuccess.bind(this)} />
@@ -75,6 +77,8 @@ class App extends React.Component {
 					}} />
 
 					<Route path="/guideformat" component={GuideFormat} />
+
+					<Route path="/admin" component={Admin} />
 
 				</Switch>
 				
