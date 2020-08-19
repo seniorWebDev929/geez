@@ -15,7 +15,7 @@ class Leaks extends React.Component {
   }
 
   render() {
-    const products = this.state.products;
+    const products = this.state.products
     return (
       <div className="Releases" >
         <div className="container">
