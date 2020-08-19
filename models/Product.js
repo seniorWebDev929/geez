@@ -5,7 +5,7 @@ const ProductSchema = new mongoose.Schema({
   description: { type: String },
   retail_date: { type: Date },
   retail_price: { type: Number },
-  resell_date: { type: Date },
+  release_date: { type: Date },
   resell_price: { type: Number },
   image: { type: String }
 });

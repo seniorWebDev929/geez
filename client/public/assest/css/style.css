@@ -847,6 +847,65 @@ button.login, .register:focus {
 .warning-message {
   display: none;
 }
+
+/***************Admin************/
+
+.container-lg {
+  margin-top: 100px;
+  margin-left: 50px;
+  margin-right: 50px;
+  color: black;
+}
+
+.title-row {
+  justify-content: flex-end;
+}
+
+.add-new {
+  margin-right: 15px;
+}
+
+#add_new_product_form input {
+  border-radius: 0;
+}
+
+#add_new_product_form textarea {
+  display: block;
+  width: 100%;
+  padding: 14px 20px;
+  color: #fff;
+  background-color: #38383d;
+  border: 0;
+  margin-bottom: 30px;
+  outline: 0;
+  text-align: center;
+}
+
+.upload {
+  width: 40% !important;
+}
+
+.upload:hover {
+  cursor: pointer;
+}
+
+.upload:focus {
+  outline: none;
+}
+
+.custom-file {
+  margin-bottom: 30px
+}
+
+.custom-file-label {
+  background-color: #38383d;
+  color: #fff;
+  border: none;
+}
+
+.product_image_preview {
+  width: 100vh;
+}
 /****************Medida**********/
 
 @media (min-width: 1380px) {

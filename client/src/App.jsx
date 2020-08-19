@@ -13,6 +13,7 @@ import Calendar from './views/Calendar'
 import Leaks from './views/Leaks'
 import GuideFormat from './views/GuideFormat'
 import Admin from './views/Admin'
+import AddNewData from './views/components/AddNewData'
 
 class App extends React.Component {
 	state = { currentUser: httpClient.getCurrentUser() }
@@ -78,7 +79,9 @@ class App extends React.Component {
 
 					<Route path="/guideformat" component={GuideFormat} />
 
-					<Route path="/admin" component={Admin} />
+					<Route exact path="/admin" component={Admin} />
+
+					<Route path="/admin/add" component={AddNewData} />
 
 				</Switch>
 				
