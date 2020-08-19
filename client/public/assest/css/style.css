@@ -237,6 +237,10 @@ nav ul li a.order-price:hover {
   font-weight: 500;
 }
 /***********Releases***********/
+.release_image {
+  height: 50vh !important;
+}
+
 .Releases {
   margin-top: 120px;
   margin-bottom: 120px;

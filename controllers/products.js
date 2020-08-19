@@ -12,9 +12,7 @@ module.exports = {
   },
 
   create: (req, res, next) => {
-    console.log(req.file);
     const url = req.protocol + '://' + req.get('host');
-    console.log(url);
     const product = new Product({
       name: req.body.name,
       model: req.body.model,
@@ -25,7 +23,6 @@ module.exports = {
       resell_price: req.body.resell_price,
       image: url + '/assest/images/' + req.file.filename
     });
-    console.log(product)
     product.save().then(result => {
       res.status(201).json({
         message: "product registered successfully"
@@ -36,5 +33,11 @@ module.exports = {
         error: err
       });
     })
+  },
+
+  getAllProducts: (req, res, next) => {
+    Product.find({}, (err, products) => {
+			res.json(products);
+		});
   }
 };

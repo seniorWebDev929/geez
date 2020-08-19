@@ -1,10 +1,21 @@
 import React from 'react'
-import ReleaseDetail from './components/ReleaseDetail'
+// import ReleaseDetail from './components/ReleaseDetail'
 import Release from './components/Release'
+import httpClient from '../httpClient';
 
 class NewReleases extends React.Component {
+  constructor(props) {
+		super(props);
+		this.state = { products: [] };
+  }
   
+  componentDidMount() {
+    httpClient.getAllProducts().then(productData => {
+      this.setState({products: productData})
+    })
+  }
   render() {
+    const products = this.state.products;
     return(
     <div className="Releases">
       <div className="container">
@@ -13,12 +24,9 @@ class NewReleases extends React.Component {
           <p>Info on All New Releases</p>
         </div>
         <div className="row mt-5">
-          <ReleaseDetail />
-          <ReleaseDetail />
-          <ReleaseDetail />
-          <ReleaseDetail />
-          <ReleaseDetail />
-          <ReleaseDetail />
+          {products.map( item => 
+            <Release key={item._id} name={item.name} model={item.model} retail_price={item.retail_price} resell_price={item.resell_price} imageUrl={item.image}/>
+          )}
 
         </div>
 

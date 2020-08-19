@@ -6,17 +6,18 @@ import httpClient from '../httpClient';
 class Home extends React.Component {
 	constructor(props) {
 		super(props);
-		this.state = { isLoggedIn: props.currentUser };
+		this.state = { isLoggedIn: props.currentUser, products: [] };
 	}
 	componentDidMount() {
-		console.log("component didmont is called")
 		httpClient.get3products().then(productData => {
 				console.log(productData)
+				this.setState({products: productData})
 			})
 	}
 
 	render() {
 		const isLoggedIn = this.state.isLoggedIn;
+		const products = this.state.products;
 		let signupBtn;
 		if (!isLoggedIn) {
 			signupBtn = <a href="/signup">Signup</a>;
@@ -72,9 +73,12 @@ class Home extends React.Component {
 								<p>These Are A Few Of The Release We've Added</p>
 							</div>
 							<div className="row mt-5">
+								{products.map( item => 
+									<Release key={item._id} name={item.name} model={item.model} retail_price={item.retail_price} resell_price={item.resell_price} imageUrl={item.image}/>
+								)}
+								{/* <Release />
 								<Release />
-								<Release />
-								<Release />
+								<Release /> */}
 							</div>
 							<div className="show-more text-center">
 								<a href="/newreleases"> <i className="fas fa-plus mr-2"></i> show more</a>

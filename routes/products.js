@@ -30,5 +30,6 @@ const upload = multer({
 
 productsRouter.route('/get3products').get(productsCtrl.get3products);
 productsRouter.route('/addProducts').post(upload.single('product_image'), productsCtrl.create);
+productsRouter.route('/getAllProducts').get(productsCtrl.getAllProducts)
 
 module.exports = productsRouter;

@@ -1,16 +1,28 @@
 import React from 'react'
 
 class Release extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { 
+      name: props.name, 
+      model: props.model, 
+      retail_price: props.retail_price, 
+      resell_price: props.resell_price,
+      imageUrl: props.imageUrl
+    }
+    console.log(this.state);
+  }
   render() {
+    const { name, model, retail_price, resell_price, imageUrl } = this.state;
     return (
       <div className="col-md-4">
         <div className="single-item">
           <div className="item-img text-center">
-            <img className="img-fluid" src="/assest/images/G2.png" alt="" />
+            <img className="img-fluid release_image" src={imageUrl} alt="" />
           </div>
           <div className="items-details text-center">
-            <span>Yeezy 700</span>
-            <h3>MNVN</h3>
+            <span>{name}</span>
+            <h3>{model}</h3>
             <span className="line"></span>
           </div>
           <div className="item-price">
@@ -18,13 +30,13 @@ class Release extends React.Component {
               <div className="col-sm-6 ">
                 <div className="Retail">
                   <h5>Retail</h5>
-                  <button>$220</button>
+                    <button>${retail_price}</button>
                 </div>
               </div>
               <div className="col-sm-6 mt-3 mt-sm-0">
                 <div className="Retail">
                   <h5>Resell</h5>
-                  <button>$300</button>
+                  <button>${resell_price}</button>
                 </div>
               </div>
             </div>

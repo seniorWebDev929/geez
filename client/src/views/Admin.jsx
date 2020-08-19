@@ -1,9 +1,18 @@
 import React from 'react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
+import httpClient from '../httpClient';
 
 class Admin extends React.Component {
+  state = {
+    products: []
+  }
+  componentDidMount() {
+    httpClient.getAllProducts().then((productData) => {
+      this.setState({ products: productData });
+    })
+  }
   render() {
-    
+    const products = this.state.products;
     return(
       <div className="container-lg">
         <div className="table">
@@ -30,21 +39,20 @@ class Admin extends React.Component {
                 </tr>
               </thead>
               <tbody>
-                <tr>
-                  <td>John Doe</td>
-                  <td>Administration</td>
-                  <td>(171) 555-2222</td>
-                </tr>
-                <tr>
-                  <td>Peter Parker</td>
-                  <td>Customer Service</td>
-                  <td>(313) 555-5735</td>
-                </tr>
-                <tr>
-                  <td>Fran Wilson</td>
-                  <td>Human Resources</td>
-                  <td>(503) 555-9931</td>
-                </tr>      
+                {products.map( item =>
+                  <tr key={item._id}>
+                    <td>{item.name}</td>
+                    <td>{item.model}</td>
+                    <td>{item.description}</td>
+                    <td>{item.release_date}</td>
+                    <td>{item.retail_date}</td>
+                    <td>{item.retail_price}</td>
+                    <td>{item.resell_price}</td>
+                    <td>
+                      <img src={item.image} alt="" />
+                    </td>
+                  </tr>
+                )}
               </tbody>
             </table>
           </div>

@@ -29,7 +29,6 @@ class App extends React.Component {
 	
 	render() {
 		const { currentUser } = this.state
-		console.log(currentUser);
 		return (
 			<section className="mainPage">
 			<Router>

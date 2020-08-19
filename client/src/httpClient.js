@@ -56,7 +56,6 @@ httpClient.logOut = function() {
 }
 
 httpClient.get3products = function() {
-	console.log("api is called");
 	return this({ method: 'get', url: 'http://localhost:3001/api/products/get3products'})
 		.then((serverResponse) => {
 			console.log(serverResponse.data)
@@ -65,10 +64,16 @@ httpClient.get3products = function() {
 }
 
 httpClient.addProducts = function(product_info) {
-	console.log(product_info);
 	return this({method: 'post', url: 'http://localhost:3001/api/products/addProducts', data: product_info })
 		.then((serverResponse) => {
 			return true;
+		})
+}
+
+httpClient.getAllProducts = function() {
+	return this({method: 'get', url: 'http://localhost:3001/api/products/getAllProducts'})
+		.then((serverResponse) => {
+			return serverResponse.data
 		})
 }
 // During initial app load attempt to set a localStorage stored token
