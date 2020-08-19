@@ -8,4 +8,9 @@ module.exports = {
 			res.json(products);
 		});
   },
+
+  create: (req, res) => {
+    console.log("create products called", req.body)
+    res.json(true);
+  }
 };

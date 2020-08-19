@@ -63,6 +63,14 @@ httpClient.get3products = function() {
 			return serverResponse.data;
 		})
 }
+
+httpClient.addProducts = function(product_info) {
+	console.log(product_info);
+	return this({method: 'post', url: 'http://localhost:3001/api/products/addProducts', data: product_info })
+		.then((serverResponse) => {
+			return true;
+		})
+}
 // During initial app load attempt to set a localStorage stored token
 // as a default header for all api requests.
 httpClient.defaults.headers.common.token = httpClient.getToken()

@@ -1,6 +1,7 @@
 import React from 'react';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
+import httpClient from '../../httpClient';
 
 class AddNewData extends React.Component {
   state = {
@@ -46,6 +47,12 @@ class AddNewData extends React.Component {
   onSubmit = e => {
     e.preventDefault();
     console.log(this.state);
+    httpClient.addProducts(this.state).then(res => {
+      console.log(res);
+      if(res){
+        this.props.history.push('/admin')
+      }
+    })
   }
   render() {
     return(

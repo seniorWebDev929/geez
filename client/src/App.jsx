@@ -17,7 +17,7 @@ import AddNewData from './views/components/AddNewData'
 
 class App extends React.Component {
 	state = { currentUser: httpClient.getCurrentUser() }
-
+	
 	onLoginSuccess(user) {
 		this.setState({ currentUser: httpClient.getCurrentUser() })
 	}
@@ -79,7 +79,11 @@ class App extends React.Component {
 
 					<Route path="/guideformat" component={GuideFormat} />
 
-					<Route exact path="/admin" component={Admin} />
+					<Route exact path="/admin" render={() => {
+						return currentUser.usertype
+							? <Home />
+							: <Admin/> 
+					}} />
 
 					<Route path="/admin/add" component={AddNewData} />
 
