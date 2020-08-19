@@ -18,7 +18,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err) => {
 	console.log(err || `Connected to MongoDB.`)
 })
 
-app.use(express.static(`${__dirname}/client/build`))
+app.use(express.static(`${__dirname}/client/public`))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(cors());

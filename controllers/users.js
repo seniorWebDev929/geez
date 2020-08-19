@@ -11,8 +11,6 @@ module.exports = {
 
 	// get one user
 	show: (req, res) => {
-		console.log("Current User:")
-		console.log(req.user)
 		User.findById(req.params.id, (err, user) => {
 			res.json(user)
 		})
