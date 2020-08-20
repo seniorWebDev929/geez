@@ -18,10 +18,10 @@ class Home extends React.Component {
 	render() {
 		const isLoggedIn = this.state.isLoggedIn;
 		const products = this.state.products;
-		let signupBtn;
-		if (!isLoggedIn) {
-			signupBtn = <a href="/signup">Signup</a>;
-		}
+		// let signupBtn;
+		// if (!isLoggedIn) {
+		// 	signupBtn = <a href="/signup">Signup</a>;
+		// }
 		return (
 			<React.Fragment>
 				<div className="mainPage">
@@ -32,7 +32,7 @@ class Home extends React.Component {
 									<div className="mainText">
 										<h1>GEEZ</h1>
 										<p>Latest Sneaker & Streetwear News</p>
-										{signupBtn}
+										<a href="https://discord.gg/VdhYpT">Join Our Premium Group</a>
 									</div>
 								</div>
 								<div className="col-lg-6">
