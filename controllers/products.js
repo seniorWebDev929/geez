@@ -29,7 +29,6 @@ module.exports = {
     .sort({release_date: 1})
     .limit(1)
     .then( product => {
-      console.log(product);
       res.json(product);
     })
     .catch( err => console.error(err))
@@ -80,7 +79,6 @@ module.exports = {
         message: "product registered successfully"
       })
     }).catch(err => {
-      console.log(err);
       res.status(500).json({
         error: err
       });

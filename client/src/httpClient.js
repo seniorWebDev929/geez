@@ -35,7 +35,6 @@ httpClient.logIn = function(credentials) {
 
 // logIn and signUp functions could be combined into one since the only difference is the url we're sending a request to..
 httpClient.signUp = function(userInfo) {
-	console.log("signup called")
 	return this({ method: 'post', url: 'http://localhost:3001/api/users', data: userInfo})
 		.then((serverResponse) => {
 			const token = serverResponse.data.token;
@@ -58,7 +57,6 @@ httpClient.logOut = function() {
 httpClient.get3products = function() {
 	return this({ method: 'get', url: 'http://localhost:3001/api/products/get3products'})
 		.then((serverResponse) => {
-			console.log(serverResponse.data)
 			return serverResponse.data;
 		})
 }

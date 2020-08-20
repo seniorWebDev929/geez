@@ -35,7 +35,6 @@ class AddNewData extends React.Component {
       }
     }
     reader.readAsDataURL(e.target.files[0]);
-    console.log(e.target.files[0]);
     this.setState({imageData: e.target.files[0]})
   }
 
@@ -48,7 +47,6 @@ class AddNewData extends React.Component {
 
   onSubmit = e => {
     e.preventDefault();
-    console.log(this.state.imageData);
     let formObj = new FormData();
     formObj.append('name', this.state.name);
     formObj.append('model', this.state.model);
@@ -58,9 +56,7 @@ class AddNewData extends React.Component {
     formObj.append('retail_price', this.state.retail_price);
     formObj.append('resell_price', this.state.resell_price);
     formObj.append('product_image', this.state.imageData);
-    console.log(formObj)
     httpClient.addProducts(formObj).then(res => {
-      console.log(res);
       if(res){
         this.props.history.push('/admin')
       }

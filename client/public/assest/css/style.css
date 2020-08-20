@@ -970,6 +970,10 @@ top: -1200px;
  
 
 @media (max-width: 1380px) {
+  .mainText a {
+    font-size: 22px;
+    padding: 10px 10px;
+  }
   .shape1 {
     z-index: -1;
     position: absolute;
@@ -1014,6 +1018,10 @@ top: -1200px;
   }
 }
 @media (max-width: 991px) {
+  .mainText a {
+    font-size: 22px;
+    padding: 10px 10px;
+  }
   .shape1 {
     z-index: -1;
     position: absolute;
@@ -1055,6 +1063,10 @@ top: -1200px;
   }
 }
 @media (max-width: 767px) {
+  .mainText a {
+    font-size: 22px;
+    padding: 10px 10px;
+  }
   .shape1 {
     z-index: -1;
     position: absolute;
@@ -1126,6 +1138,10 @@ top: -1200px;
   }
 }
 @media (max-width: 600px) {
+  .mainText a {
+    font-size: 22px;
+    padding: 10px 10px;
+  }
   .instagram a {
     padding: 0px 120px;
   }
@@ -1162,6 +1178,7 @@ top: -1200px;
   .container {
     max-width: 90% !important;
   }
+  
 }
 
 .fc.fc-media-screen.fc-direction-ltr.fc-theme-standard {

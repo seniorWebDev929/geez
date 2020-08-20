@@ -19,15 +19,11 @@ class Calendar extends React.Component {
   render() {
     let events = [];
     const products = this.state.products;
-    console.log(products);
     products.map((item, index) => {
-      console.log(index);
       const obj = {}
       obj.title = item.name;
       obj.date = item.release_date.split('T')[0];;
       events.push(obj);
-      // events[index].title = item.name;
-      // events[index].date = item.release_date.split('T')[0];
     })
     return (
       <div className="Releases calendar_container">

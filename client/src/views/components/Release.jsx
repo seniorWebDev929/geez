@@ -10,7 +10,6 @@ class Release extends React.Component {
       resell_price: props.resell_price,
       imageUrl: props.imageUrl
     }
-    console.log(this.state);
   }
   render() {
     const { name, model, retail_price, resell_price, imageUrl } = this.state;

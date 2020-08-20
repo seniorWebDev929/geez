@@ -3,7 +3,6 @@ const
 	User = require('./models/User.js'),
 	JWT_SECRET = "this is my secret key"
 
-	console.log(JWT_SECRET);
 // function for creating tokens
 function signToken(user) {
 	// toObject() returns a basic js object with only the info from the db
