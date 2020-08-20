@@ -10,7 +10,7 @@ class NewReleases extends React.Component {
   }
   
   componentDidMount() {
-    httpClient.getAllProducts().then(productData => {
+    httpClient.getNewReleasedProducts().then(productData => {
       this.setState({products: productData})
     })
   }

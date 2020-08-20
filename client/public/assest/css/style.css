@@ -238,7 +238,7 @@ nav ul li a.order-price:hover {
 }
 /***********Releases***********/
 .release_image {
-  height: 50vh !important;
+  height: 300px !important;
 }
 
 .Releases {
@@ -731,7 +731,7 @@ footer {
   color: #fff;
   text-transform: capitalize;
 }
-.user-form button {
+.user-form .custom_btn {
   display: block;
   padding: 12px;
   text-align: center;
@@ -861,6 +861,10 @@ button.login, .register:focus {
   color: black;
 }
 
+.admin_shoes {
+  height: 115px;
+}
+
 .title-row {
   justify-content: flex-end;
 }
@@ -898,7 +902,8 @@ button.login, .register:focus {
 }
 
 .custom-file {
-  margin-bottom: 30px
+  margin-bottom: 30px;
+  z-index: 0;
 }
 
 .custom-file-label {
@@ -909,6 +914,11 @@ button.login, .register:focus {
 
 .product_image_preview {
   width: 100vh;
+}
+
+textarea::placeholder {
+  color: #fff;
+  text-align: center;
 }
 /****************Medida**********/
 

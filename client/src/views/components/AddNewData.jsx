@@ -90,7 +90,7 @@ class AddNewData extends React.Component {
             
 					</div>
 					
-					<button className="register" onClick={this.onSubmit}>Add</button>
+					<button className="register custom_btn" onClick={this.onSubmit}>Add</button>
 					
 				</div>
       </div>

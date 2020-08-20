@@ -76,6 +76,27 @@ httpClient.getAllProducts = function() {
 			return serverResponse.data
 		})
 }
+
+httpClient.getNearestProduct = function() {
+	return this({method: 'get', url: 'http://localhost:3001/api/products/getNearestProduct'})
+		.then(serverResponse => {
+			return serverResponse.data;
+		})
+}
+
+httpClient.getNewReleasedProducts = function() {
+	return this({method: 'get', url: 'http://localhost:3001/api/products/getNewReleasedProducts'})
+		.then(serverResponse => {
+			return serverResponse.data;
+		})
+}
+
+httpClient.getNotReleasedProducts = function() {
+	return this({method: 'get', url: 'http://localhost:3001/api/products/getNotReleasedProducts'})
+		.then(serverResponse => {
+			return serverResponse.data;
+		})
+}
 // During initial app load attempt to set a localStorage stored token
 // as a default header for all api requests.
 httpClient.defaults.headers.common.token = httpClient.getToken()

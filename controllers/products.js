@@ -5,10 +5,62 @@ const { Mongoose } = require('mongoose');
 module.exports = {
   //get3products for homepage(get all list temporaly)
   get3products: (req, res) => {
-    console.log("called")
-    Product.find({}, (err, products) => {
-			res.json(products);
-		});
+    const now = new Date();
+    Product.find({
+      release_date: {
+        $lte: now
+      }
+    })
+    .sort({ release_date: -1})
+    .limit(3)
+    .then( products => {
+      res.json(products);
+    })
+    .catch( err => console.error(err))
+  },
+
+  getNearestProduct: (req, res) => {
+    const now = new Date();
+    Product.find({
+      release_date: {
+        $gte: now
+      }
+    })
+    .sort({release_date: 1})
+    .limit(1)
+    .then( product => {
+      console.log(product);
+      res.json(product);
+    })
+    .catch( err => console.error(err))
+  },
+
+  getNewReleasedProducts: (req, res) => {
+    const now = new Date();
+    Product.find({
+      release_date: {
+        $lte: now
+      }
+    })
+    .sort({ release_date: -1 })
+    .then( products => {
+      res.json(products);
+    })
+    .catch( err => console.error(err))
+  },
+
+  getNotReleasedProducts: (req, res) => {
+    const now = new Date();
+    Product.find({
+      release_date: {
+        $gte: now
+      }
+    })
+    .sort({ release_date: 1 })
+    .then( products => {
+      res.json(products);
+    })
+    .catch( err => console.error(err))
   },
 
   create: (req, res, next) => {

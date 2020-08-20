@@ -33,8 +33,8 @@ class Admin extends React.Component {
                   <th>Description</th>
                   <th>Release Date</th>
                   <th>Retail Date</th>
-                  <th>Retail Price</th>
-                  <th>Resell Price</th>
+                  <th>Retail Price($)</th>
+                  <th>Resell Price($)</th>
                   <th>Image</th>
                 </tr>
               </thead>
@@ -49,7 +49,7 @@ class Admin extends React.Component {
                     <td>{item.retail_price}</td>
                     <td>{item.resell_price}</td>
                     <td>
-                      <img src={item.image} alt="" />
+                      <img className="admin_shoes" src={item.image} alt="" />
                     </td>
                   </tr>
                 )}

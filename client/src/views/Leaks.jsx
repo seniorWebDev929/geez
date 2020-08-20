@@ -9,7 +9,7 @@ class Leaks extends React.Component {
   }
 
   componentDidMount() {
-    httpClient.getAllProducts().then(productData => {
+    httpClient.getNotReleasedProducts().then(productData => {
       this.setState({products: productData})
     })
   }

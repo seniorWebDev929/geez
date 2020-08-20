@@ -30,6 +30,9 @@ const upload = multer({
 
 productsRouter.route('/get3products').get(productsCtrl.get3products);
 productsRouter.route('/addProducts').post(upload.single('product_image'), productsCtrl.create);
-productsRouter.route('/getAllProducts').get(productsCtrl.getAllProducts)
+productsRouter.route('/getAllProducts').get(productsCtrl.getAllProducts);
+productsRouter.route('/getNearestProduct').get(productsCtrl.getNearestProduct);
+productsRouter.route('/getNewReleasedProducts').get(productsCtrl.getNewReleasedProducts);
+productsRouter.route('/getNotReleasedProducts').get(productsCtrl.getNotReleasedProducts);
 
 module.exports = productsRouter;

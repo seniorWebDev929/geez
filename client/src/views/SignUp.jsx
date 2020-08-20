@@ -100,7 +100,7 @@ class SignUp extends React.Component {
 							<span className="checkmark"></span>
 						</label>
 					</div>
-					<button className="register" onClick={this.onFormSubmit.bind(this)}>Register</button>
+					<button className="register custom_btn" onClick={this.onFormSubmit.bind(this)}>Register</button>
 					<div className="account-sub">
 						Already Have An Account? <a href="/login">Login</a>
 					</div>

@@ -67,7 +67,7 @@ class LogIn extends React.Component {
 						<a href="#">forget passowrd</a>
 
 					</div>
-					<button className="login" onClick={this.onFormSubmit.bind(this)}>Login</button>
+					<button className="login custom_btn" onClick={this.onFormSubmit.bind(this)}>Login</button>
 					<div className="account-sub">
 						New to Geez? <a href="/signup">Sign Up</a>
 					</div>

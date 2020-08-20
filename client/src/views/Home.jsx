@@ -2,6 +2,7 @@ import React from 'react';
 import Release from './components/Release';
 import Footer from './components/Footer';
 import httpClient from '../httpClient';
+import ReleasePreview from './components/ReleasePreview';
 
 class Home extends React.Component {
 	constructor(props) {
@@ -10,7 +11,6 @@ class Home extends React.Component {
 	}
 	componentDidMount() {
 		httpClient.get3products().then(productData => {
-				console.log(productData)
 				this.setState({products: productData})
 			})
 	}
@@ -50,20 +50,7 @@ class Home extends React.Component {
 								<h1>Featured Release</h1>
 								<p>We've Hand-Picked The Best Release Of The Month.</p>
 							</div>
-							<div className="row mt-5">
-								<div className="col-12 cont-featured">
-									<div className="MNVN text-center">
-										<div className="MNVN-Text">
-											<span className="Yeezy">Yeezy 700</span>
-											<h1>MNVN</h1>
-											<span className="Releasing">Releasing 7.20</span>
-										</div>
-										<div className="hover-section">
-											<a href="/newreleases"> <i className="fas fa-plus mr-2"></i> show more</a>
-										</div>
-									</div>
-								</div>
-							</div>
+							<ReleasePreview />
 						</div>
 					</div>
 					<div className="Releases">
