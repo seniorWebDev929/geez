@@ -28,8 +28,6 @@ class Leaks extends React.Component {
               {products.map( item => 
                 <LeakDetail key={item._id} name={item.name} model={item.model} description={item.description} release_date={item.release_date} retail_date={item.retail_date} imageUrl={item.image}/>
               )}
-              {/* <LeakDetail />
-              <LeakDetail /> */}
             </div>
           </div>
         </div>

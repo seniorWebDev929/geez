@@ -63,9 +63,6 @@ class Home extends React.Component {
 								{products.map( item => 
 									<Release key={item._id} name={item.name} model={item.model} retail_price={item.retail_price} resell_price={item.resell_price} imageUrl={item.image}/>
 								)}
-								{/* <Release />
-								<Release />
-								<Release /> */}
 							</div>
 							<div className="show-more text-center">
 								<a href="/newreleases"> <i className="fas fa-plus mr-2"></i> show more</a>

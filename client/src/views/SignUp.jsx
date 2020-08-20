@@ -68,19 +68,6 @@ class SignUp extends React.Component {
 		const { name, email, password } = this.state.fields
 		const pswStr = this.state.pswStr
 		return (
-			// <div className='SignUp'>
-			// 	<div className='row'>
-			// 		<div className='column column-33 column-offset-33'>
-			// 			<h1>Sign Up</h1>
-			// 			<form onChange={this.onInputChange.bind(this)} onSubmit={this.onFormSubmit.bind(this)}>
-			// 				<input type="text" placeholder="Name" name="name" value={name} onChange={this.onInputChange.bind(this)}/>
-			// 				<input type="text" placeholder="Email" name="email" value={email} onChange={this.onInputChange.bind(this)}/>
-			// 				<input type="password" placeholder="Password" name="password" value={password} onChange={this.onInputChange.bind(this)}/>
-			// 				<button onSubmit={this.onFormSubmit.bind(this)}>Sign Up</button>
-			// 			</form>
-			// 		</div>
-			// 	</div>
-			// </div>
 			<div className="container">
 				<div className="user-form text-center signUp-form">
 					<img src="/assest/images/logo.png" className="img-fluid" alt="" />

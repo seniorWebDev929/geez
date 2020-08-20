@@ -31,11 +31,6 @@ class LeakDetail extends React.Component {
               <div className="leaks-text">
                 <h5>{name}</h5>
                 <h1>{model}</h1>
-                {/* <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy
-                eirmod tempor invidunt ut labore et dolore
-                magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo
-                duo
-                        </p> */}
                 <p>{description}</p>
                 <div className="Release-Retail">
                   <span className="mr-4">Release Date: <b> {release_date} </b></span>

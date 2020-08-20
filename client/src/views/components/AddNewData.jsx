@@ -72,7 +72,6 @@ class AddNewData extends React.Component {
 				<div className="user-form text-center signUp-form" id="add_new_product_form">
 					<img src="/assest/images/logo.png" className="img-fluid" alt="" />
 					<p>Add New Product</p>
-					{/* <p className="text-danger" style={{display:this.state.warningMessage.display}}>{this.state.warningMessage.value}</p> */}
 					<div className="form-inputs">
 						<input type="text" name="name" placeholder="Product Name" id=""  onChange={this.onChangeHandler}/>
 						<input type="text" name="model" placeholder="Product Model" id=""  onChange={this.onChangeHandler}/>

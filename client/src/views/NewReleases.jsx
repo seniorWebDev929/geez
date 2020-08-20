@@ -1,5 +1,4 @@
 import React from 'react'
-// import ReleaseDetail from './components/ReleaseDetail'
 import Release from './components/Release'
 import httpClient from '../httpClient';
 
