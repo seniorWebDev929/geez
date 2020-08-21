@@ -7,7 +7,7 @@ const
 	logger = require('morgan'),
 	bodyParser = require('body-parser'),
 	mongoose = require('mongoose'),
-	MONGODB_URI = process.env.MONGODB_URI || 'mongodb://localhost/react-express-jwt',
+	MONGODB_URI = process.env.MONGODB_URI || 'mongodb+srv://zorandev:zoranqwer@cluster0.eocan.mongodb.net/geezla',
 	PORT = process.env.PORT || 3001,
 	usersRoutes = require('./routes/users.js'),
 	productsRoutes = require('./routes/products.js'),
@@ -18,7 +18,7 @@ mongoose.connect(MONGODB_URI, { useNewUrlParser: true }, (err) => {
 	console.log(err || `Connected to MongoDB.`)
 })
 
-app.use(express.static(`${__dirname}/client/public`))
+app.use(express.static(`${__dirname}/client/build`))
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(cors());
