@@ -35,7 +35,7 @@ httpClient.logIn = function(credentials) {
 
 // logIn and signUp functions could be combined into one since the only difference is the url we're sending a request to..
 httpClient.signUp = function(userInfo) {
-	return this({ method: 'post', url: 'http://localhost:3001/api/users', data: userInfo})
+	return this({ method: 'post', url: '/api/users', data: userInfo})
 		.then((serverResponse) => {
 			const token = serverResponse.data.token;
 			if(token) {
@@ -55,42 +55,42 @@ httpClient.logOut = function() {
 }
 
 httpClient.get3products = function() {
-	return this({ method: 'get', url: 'http://localhost:3001/api/products/get3products'})
+	return this({ method: 'get', url: '/api/products/get3products'})
 		.then((serverResponse) => {
 			return serverResponse.data;
 		})
 }
 
 httpClient.addProducts = function(product_info) {
-	return this({method: 'post', url: 'http://localhost:3001/api/products/addProducts', data: product_info })
+	return this({method: 'post', url: '/api/products/addProducts', data: product_info })
 		.then((serverResponse) => {
 			return true;
 		})
 }
 
 httpClient.getAllProducts = function() {
-	return this({method: 'get', url: 'http://localhost:3001/api/products/getAllProducts'})
+	return this({method: 'get', url: '/api/products/getAllProducts'})
 		.then((serverResponse) => {
 			return serverResponse.data
 		})
 }
 
 httpClient.getNearestProduct = function() {
-	return this({method: 'get', url: 'http://localhost:3001/api/products/getNearestProduct'})
+	return this({method: 'get', url: '/api/products/getNearestProduct'})
 		.then(serverResponse => {
 			return serverResponse.data;
 		})
 }
 
 httpClient.getNewReleasedProducts = function() {
-	return this({method: 'get', url: 'http://localhost:3001/api/products/getNewReleasedProducts'})
+	return this({method: 'get', url: '/api/products/getNewReleasedProducts'})
 		.then(serverResponse => {
 			return serverResponse.data;
 		})
 }
 
 httpClient.getNotReleasedProducts = function() {
-	return this({method: 'get', url: 'http://localhost:3001/api/products/getNotReleasedProducts'})
+	return this({method: 'get', url: '/api/products/getNotReleasedProducts'})
 		.then(serverResponse => {
 			return serverResponse.data;
 		})
