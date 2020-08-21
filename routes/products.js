@@ -3,7 +3,7 @@ const productsRouter = new express.Router();
 const productsCtrl = require('../controllers/products');
 const multer = require('multer');
 
-const DIR = `client/public/assest/images`;
+const DIR = `/assest/images`;
 
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
