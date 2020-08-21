@@ -63,7 +63,7 @@ module.exports = {
   },
 
   create: (req, res, next) => {
-    const url = req.protocol + '://' + req.get('host');
+    const url = 'https://geezla.herokuapp.com/';
     const product = new Product({
       name: req.body.name,
       model: req.body.model,
@@ -72,7 +72,7 @@ module.exports = {
       retail_date: req.body.retail_date,
       retail_price: req.body.retail_price,
       resell_price: req.body.resell_price,
-      image: url + '/assest/images/' + req.file.filename
+      image: url + 'assest/images/' + req.file.filename
     });
     product.save().then(result => {
       res.status(201).json({
