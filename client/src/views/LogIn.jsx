@@ -52,7 +52,7 @@ class LogIn extends React.Component {
 							<input type="checkbox" />
 							<span className="checkmark"></span>
 						</label>
-						<a href="#">forget passowrd</a>
+						<a href="#">Forget Password?</a>
 
 					</div>
 					<button className="login custom_btn" onClick={this.onFormSubmit.bind(this)}>Login</button>

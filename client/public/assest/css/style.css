@@ -970,10 +970,6 @@ top: -1200px;
  
 
 @media (max-width: 1380px) {
-  .mainText a {
-    font-size: 22px;
-    padding: 10px 10px;
-  }
   .shape1 {
     z-index: -1;
     position: absolute;
@@ -1063,10 +1059,6 @@ top: -1200px;
   }
 }
 @media (max-width: 767px) {
-  .mainText a {
-    font-size: 22px;
-    padding: 10px 10px;
-  }
   .shape1 {
     z-index: -1;
     position: absolute;
@@ -1138,10 +1130,6 @@ top: -1200px;
   }
 }
 @media (max-width: 600px) {
-  .mainText a {
-    font-size: 22px;
-    padding: 10px 10px;
-  }
   .instagram a {
     padding: 0px 120px;
   }
@@ -1179,6 +1167,46 @@ top: -1200px;
     max-width: 90% !important;
   }
   
+  .mainText a {
+    font-size: 28px;
+    padding: 20px 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mainText a {
+    font-size: 22px;
+    padding: 10px 10px;
+  }
+
+  .Featured-head h1 {
+    font-size: 50px;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 565px) {
+  .mainText a {
+    font-size: 22px;
+    padding: 10px 10px;
+  }
+
+  .Featured-head h1 {
+    font-size: 50px;
+    font-weight: 800;
+  }
+}
+
+@media (max-width: 320px) {
+  .mainText a {
+    font-size: 22px;
+    padding: 10px 10px;
+  }
+
+  .Featured-head h1 {
+    font-size: 50px;
+    font-weight: 800;
+  }
 }
 
 .fc.fc-media-screen.fc-direction-ltr.fc-theme-standard {
