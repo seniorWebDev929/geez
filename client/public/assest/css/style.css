@@ -1016,7 +1016,7 @@ top: -1200px;
 @media (max-width: 991px) {
   .mainText a {
     font-size: 22px;
-    padding: 10px 10px;
+    padding: 15px 25px;
   }
   .shape1 {
     z-index: -1;
@@ -1176,7 +1176,7 @@ top: -1200px;
 @media (max-width: 480px) {
   .mainText a {
     font-size: 22px;
-    padding: 10px 10px;
+    padding: 15px 25px;
   }
 
   .Featured-head h1 {
@@ -1188,7 +1188,7 @@ top: -1200px;
 @media (max-width: 565px) {
   .mainText a {
     font-size: 22px;
-    padding: 10px 10px;
+    padding: 15px 25px;
   }
 
   .Featured-head h1 {
@@ -1199,8 +1199,8 @@ top: -1200px;
 
 @media (max-width: 320px) {
   .mainText a {
-    font-size: 22px;
-    padding: 10px 10px;
+    font-size: 17px;
+    padding: 10px 15px;
   }
 
   .Featured-head h1 {
