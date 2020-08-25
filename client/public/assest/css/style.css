@@ -1263,7 +1263,7 @@ top: -1200px;
   justify-content: center;
   align-items: center;
   font-family: "Black";
-  font-size: 40px!important;
+  font-size: 40px;
   color: #36dd95;
   text-shadow: 0px 0px 25px #36dd956b;
 }
