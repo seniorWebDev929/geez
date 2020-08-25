@@ -1187,13 +1187,17 @@ top: -1200px;
 
 @media (max-width: 565px) {
   .mainText a {
-    font-size: 22px;
+    font-size: 19px;
     padding: 15px 25px;
   }
 
   .Featured-head h1 {
     font-size: 50px;
     font-weight: 800;
+  }
+
+  .MNVN-Text h1{
+    font-size: 43px;
   }
 }
 
