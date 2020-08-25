@@ -73,7 +73,7 @@ class Home extends React.Component {
 						<div className="container">
 							<h1>Follow Us On Instagram</h1>
 							<p>Stay Up to Date With Our Posts</p>
-							<a href="#"><i className="fab fa-instagram"></i></a>
+							<a href="https://www.instagram.com/geez/"><i className="fab fa-instagram"></i></a>
 						</div>
 					</div>
 					<Footer />

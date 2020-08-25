@@ -10,7 +10,7 @@ class Footer extends React.Component {
               <div className="footer-logoText">
                 <img src="/assest/images/footer-logo.png" className="img-fluid" alt="" />
                 <p>Latest Sneaker & Streetwear News</p>
-                <a href="#"><i className="fab fa-instagram"></i></a>
+                <a href="https://www.instagram.com/geez/"><i className="fab fa-instagram"></i></a>
               </div>
 
 
