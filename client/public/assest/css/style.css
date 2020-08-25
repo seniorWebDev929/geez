@@ -120,7 +120,7 @@ nav ul li a.order-price:hover {
   font-weight: 900;
 }
 .Featured-head.single-page h1 {
-  font-size: 84px;
+  /* font-size: 84px; */
 }
 .Featured-head.Guide-page h1 {
   font-size: 81px;
@@ -669,6 +669,7 @@ footer {
   margin-bottom: 0;
   font-size: 25px;
   line-height: 36px;
+  text-align: justify;
 }
 .Release-Retail {
   margin-top: 10px;
@@ -1198,6 +1199,27 @@ top: -1200px;
 
   .MNVN-Text h1{
     font-size: 43px;
+  }
+
+  .leaks-text h5 {
+    font-weight: 500;
+    font-size: 31px;
+    margin-bottom: 0;
+  }
+  .leaks-text h1 {
+    font-weight: 900;
+    font-size: 36px;
+    color: #36dd95;
+    margin-bottom: 0;
+  }
+  .leaks-text p {
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 36px;
+    text-align: justify;
+  }
+  .fc-toolbar-title {
+    font-size: 23px!important;
   }
 }
 
